@@ -10,6 +10,9 @@ public class MainProgram {
 
         printSomeNumbers();
         printNumbers(3,6);
+        System.out.println(sumUp(2,4));
+        System.out.println(powerOfTwo(4));
+        System.out.println(sumUpPowerOfTwo(2));
 
     }
 
@@ -35,9 +38,23 @@ public class MainProgram {
 
     public static int powerOfTwo(int exp){
         int result = 1;
-        for (int i = 1; i <= exp; i++) {
-            result = result * 2;
+        if(exp >= 0) {
+            for (int i = 1; i <= exp; i++) {
+                result = result * 2;
+            }
         }
         return result;
+    }
+
+    public static int sumUpPowerOfTwo(int n){
+        int result = 1;
+        int sum = 1;
+        if(n >= 0) {
+            for (int i = 1; i <= n; i++) {
+                result = result * 2;
+                sum = sum + result;
+            }
+        }
+        return sum;
     }
 }
