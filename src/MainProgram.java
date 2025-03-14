@@ -13,6 +13,8 @@ public class MainProgram {
         System.out.println(sumUp(2,4));
         System.out.println(powerOfTwo(4));
         System.out.println(sumUpPowerOfTwo(2));
+        rectangleStars(10,10);
+        triangleStars(5);
 
     }
 
@@ -56,5 +58,35 @@ public class MainProgram {
             }
         }
         return sum;
+    }
+
+    public static void rectangleStars(int width, int height){
+        for (int i = 1; i <= height; i++) {
+            for (int j = 1; j <= width; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void rectangleStarsSafe(int width, int height){
+        if(height > 0 && width > 0) {
+            for (int i = 1; i <= height; i++) {
+                for (int j = 1; j <= width; j++) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+        }
+
+    }
+
+    public static void triangleStars(int width){
+        for (int i = 1; i <= width; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
     }
 }
