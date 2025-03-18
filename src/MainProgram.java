@@ -15,6 +15,9 @@ public class MainProgram {
         System.out.println(sumUpPowerOfTwo(2));
         rectangleStars(10,10);
         triangleStars(5);
+        printEvenNumbers(1,10);
+        System.out.println(sumUpThree(0,8));
+        starThing(5, 5);
 
     }
 
@@ -87,6 +90,38 @@ public class MainProgram {
                 System.out.print("* ");
             }
             System.out.println();
+        }
+    }
+
+    public static void printEvenNumbers(int start, int end){
+        for (int i = start; i <= end; i++) {
+            if(i % 2 == 0){
+                System.out.println(i);
+            }
+        }
+    }
+
+    public static int sumUpThree(int start, int end){
+        int sum = 0;
+        for (int i = start; i <= end; i++) {
+            if(i % 3 == 0){
+                sum = sum + i;
+            }
+        }
+        return sum;
+    }
+
+    public static void starThing(int width, int height){
+        for (int i = 1; i <= height; i++) {
+            if(i % 2 == 0){
+                System.out.println("* ");
+            }
+            else {
+                for (int j = 1; j <= width; j++) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
         }
     }
 }
